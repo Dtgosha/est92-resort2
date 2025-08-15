@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Est92 Resort - Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <h1 class="brand">Est92 Resort - Dashboard</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2>Bookings</h2>
+      <div class="controls">
+        <label for="filterType">Filter</label>
+        <select id="filterType">
+          <option value="all">All</option>
+          <option value="room">Rooms</option>
+          <option value="restaurant">Restaurant</option>
+          <option value="conference">Conference</option>
+        </select>
+      </div>
+      <div id="bookingsTableWrap"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      Contact: +91 7340821920 | Email: dtgosha11@gmail.com
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

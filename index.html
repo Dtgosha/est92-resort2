@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Est92 Resort - Home</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <h1 class="brand">Est92 Resort</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="admin.html">Admin Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h2>Welcome to Est92 Resort</h2>
+    <p>You deserve the royal treatment </p>
+  </section>
+
+  <section id="rooms" class="cards">
+    <h3>Rooms</h3>
+    <div class="card-grid">
+      <!-- T Series -->
+      <div class="card">
+        <img src="images/njiva.png.webp" alt="T series" />
+        <h4>T Series (T1 - T4)</h4>
+        <p>$10 per person / night</p>
+        <div class="room-list">
+          <button onclick="location.href='booking.html?type=T&Troom=T1'">Book T1</button>
+          <button onclick="location.href='booking.html?type=T&Troom=T2'">Book T2</button>
+          <button onclick="location.href='booking.html?type=T&Troom=T3'">Book T3</button>
+          <button onclick="location.href='booking.html?type=T&Troom=T4'">Book T4</button>
+        </div>
+      </div>
+
+      <!-- S Series -->
+      <div class="card">
+        <img src="images/mufasa.jpg" alt="S series" />
+        <h4>S Series (S1 - S5)</h4>
+        <p>$25 per person / night</p>
+        <div class="room-list">
+          <button onclick="location.href='booking.html?type=S&Sroom=S1'">Book S1</button>
+          <button onclick="location.href='booking.html?type=S&Sroom=S2'">Book S2</button>
+          <button onclick="location.href='booking.html?type=S&Sroom=S3'">Book S3</button>
+          <button onclick="location.href='booking.html?type=S&Sroom=S4'">Book S4</button>
+          <button onclick="location.href='booking.html?type=S&Sroom=S5'">Book S5</button>
+        </div>
+      </div>
+
+      <!-- E Series -->
+      <div class="card">
+        <img src="images/elephant.webp" alt="E series" />
+        <h4>E Series (E1 - E3)</h4>
+        <p>$35 per person / night</p>
+        <div class="room-list">
+          <button onclick="location.href='booking.html?type=E&Eroom=E1'">Book E1</button>
+          <button onclick="location.href='booking.html?type=E&Eroom=E2'">Book E2</button>
+          <button onclick="location.href='booking.html?type=E&Eroom=E3'">Book E3</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!-- V Series -->
+      <div class="card">
+        <img src="images/rafiki.jpeg" alt="V series" />
+        <h4>V Series (V1 - V4)</h4>
+        <p>$35 per person / night</p>
+        <div class="room-list">
+          <button onclick="location.href='booking.html?type=V&Vroom=V1'">Book V1</button>
+          <button onclick="location.href='booking.html?type=V&Vroom=V2'">Book V2</button>
+          <button onclick="location.href='booking.html?type=V&Vroom=V3'">Book V3</button>
+          <button onclick="location.href='booking.html?type=V&Vroom=V3'">Book V4</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="restaurant" class="cards">
+    <h3>Restaurant</h3>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/chefmon.jpeg" alt="Restaurant" />
+        <h4>Est92 Restaurant</h4>
+        <p>Simple, delicious meals. Reserve a table or order with your room.</p>
+        <button onclick="location.href='booking.html?service=restaurant'">Reserve Table</button>
+      </div>
+
+      <div class="card">
+        <img src="images/lions.jpeg" alt="Conference" />
+        <h4>Conference Hall</h4>
+        <p>Capacity up to 80 people. Projector, sound system, Wi-Fi available.</p>
+        <button onclick="location.href='booking.html?service=conference'">Book Conference</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Contact: +91 7340821920 | Email: dtgosha11@gmail.com</p>
+    <p>&copy; Est92 Resort</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

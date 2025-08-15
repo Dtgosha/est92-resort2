@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Est92 Resort - Admin Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <h1 class="brand">Est92 Resort</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Animated central login window -->
+  <div class="admin-window">
+    <div class="admin-header">
+      <span class="admin-icon">&#128274;</span>
+      <h2>Admin Login</h2>
+      <p class="admin-desc">Enter your credentials to access the admin dashboard.</p>
+    </div>
+    <form id="adminLoginForm">
+      <div class="form-row">
+        <label for="adminUser">Username</label>
+        <input type="text" id="adminUser" required autocomplete="username" />
+      </div>
+      <div class="form-row">
+        <label for="adminPass">Password</label>
+        <input type="password" id="adminPass" required autocomplete="current-password" />
+      </div>
+      <div class="form-row button-row">
+        <button type="submit" class="admin-btn">Login</button>
+        <button type="button" class="admin-btn" onclick="location.href='index.html'">Cancel</button>
+      </div>
+      <div id="adminMsg" class="message"></div>
+    </form>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      Contact: +91 7340821920 | Email: dtgosha11@gmail.com
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

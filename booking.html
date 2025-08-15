@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Est92 Resort - Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <h1 class="brand">Est92 Resort</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="admin.html">Admin Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="booking-window">
+      <h2>Make a Booking / Reservation</h2>
+      <form id="bookingForm">
+        <div class="form-row">
+          <label for="bookingType">Booking Type</label>
+          <select id="bookingType" name="bookingType">
+            <option value="room">Room</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="conference">Conference</option>
+          </select>
+        </div>
+
+        <div id="roomSelection" class="form-row">
+          <label for="roomId">Room</label>
+          <select id="roomId" name="roomId"></select>
+        </div>
+
+        <div class="form-row">
+          <label for="checkin">Check-in</label>
+          <input type="date" id="checkin" name="checkin" />
+        </div>
+        <div class="form-row">
+          <label for="checkout">Check-out</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+
+        <div class="form-row">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" value="1" min="1" />
+        </div>
+
+        <div class="form-row">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-row summary-row">
+          <div class="summary-card">
+            <h4>Booking Summary</h4>
+            <div id="summaryDetails">
+              <p>Type: <span id="summaryType">Room</span></p>
+              <p>Room: <span id="summaryRoom">-</span></p>
+              <p>Guests: <span id="summaryGuests">1</span></p>
+              <p>Check-in: <span id="summaryCheckin">-</span></p>
+              <p>Check-out: <span id="summaryCheckout">-</span></p>
+              <p>Total Cost: <span id="totalCost">$0</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row button-row">
+          <button type="submit" class="booking-btn">Confirm Booking</button>
+          <button type="button" class="booking-btn" onclick="location.href='index.html'">Cancel</button>
+        </div>
+        <div id="message" class="message"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contact: +91 7340821920 | Email: dtgosha11@gmail.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

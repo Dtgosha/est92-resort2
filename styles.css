@@ -1,0 +1,376 @@
+/* Main body styles */
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: #f5f3e7;
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    background-size: 200% 200%;
+    animation: bgFade 18s ease-in-out infinite;
+}
+
+@keyframes bgFade {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Header */
+.site-header {
+    background: #111;
+    color: #fff;
+    padding: 1.2rem 0 1rem 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    border-bottom: 2px solid #16a34a;
+}
+
+.brand {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 12px #000;
+    font-family: 'Playfair Display', serif;
+}
+
+.site-header nav a {
+    color: #16a34a;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.site-header nav a:hover {
+    color: #f59e42;
+}
+
+/* Hero section */
+.hero {
+    padding: 2.2rem 0 1.5rem 0;
+    text-align: center;
+    background: linear-gradient(90deg, #222 0%, #333 100%);
+    border-radius: 14px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    font-family: 'Playfair Display', serif;
+    color: #16a34a;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem;
+    margin: 1.5rem 0;
+}
+
+.card {
+    border-radius: 12px;
+    padding: 1.1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    color: #fff;
+    border: 2px solid #222;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Inter', sans-serif;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #18181b;
+}
+
+.card.room { border-left: 5px solid #16a34a; }
+.card.conference { border-left: 5px solid #ef4444; }
+.card.restaurant { border-left: 5px solid #f59e42; }
+
+.card .title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.card .desc {
+    font-size: 0.98rem;
+    color: #f5f3e7;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+.card .button-row {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+/* Booking buttons */
+.booking-btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    border: none;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.12);
+    transition: background 0.2s, transform 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-btn:hover, .booking-btn:focus {
+    background: #14532d;
+    transform: scale(1.08);
+}
+
+.booking-btn:active {
+    background: #15803d;
+    transform: scale(0.97);
+}
+
+/* Card buttons */
+.card button {
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.12);
+    transition: background 0.2s, transform 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.card button:hover, .card button:focus {
+    background: #14532d;
+    transform: scale(1.08);
+}
+
+.card button:active {
+    background: #15803d;
+    transform: scale(0.97);
+}
+
+/* Card images/icons */
+.card img, .card .icon, .booking-window .icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 0.7rem;
+    background: #222;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.card img:hover, .card .icon:hover, .booking-window .icon:hover {
+    transform: scale(2.1);
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(30,41,59,0.22);
+}
+
+/* Booking window */
+.booking-window {
+    position: relative;
+    margin: 3rem auto 2rem auto;
+    max-width: 480px;
+    background: rgba(30, 41, 59, 0.92);
+    border-radius: 24px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+    border: 3px solid #16a34a;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.booking-window h2 {
+    margin-top: 0;
+    color: #16a34a;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.form-row {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-row label {
+    font-weight: 600;
+    color: #16a34a;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row input[type="date"],
+.form-row input[type="number"],
+.form-row input[type="tel"],
+.form-row input[type="email"],
+.form-row select {
+    padding: 0.9rem;
+    border-radius: 10px;
+    border: 1px solid #16a34a;
+    background: #fff;
+    color: #222;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.button-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+
+.summary-row {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-card {
+    background: #222;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 1rem 1.2rem;
+    color: #fff;
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
+
+.summary-card h4 {
+    margin-top: 0;
+    color: #16a34a;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+.summary-card p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.message {
+    margin-top: 1rem;
+    color: #ef4444;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+@keyframes adminPop {
+    0% { transform: scale(0.7); opacity: 0; }
+    70% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer */
+.site-footer {
+    background: #111;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    border-top: 2px solid #16a34a;
+    text-align: center;
+    color: #16a34a;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .site-header .nav {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .card img, .card .icon {
+        width: 60px;
+        height: 60px;
+    }
+    .card-grid {
+        gap: 0.7rem;
+    }
+    .card .button-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .booking-window {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+    .summary-card {
+        padding: 0.7rem 0.5rem;
+        max-width: 98vw;
+    }
+}
+
+/* Admin window */
+.admin-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 95vw;
+    background: rgba(30, 41, 59, 0.96);
+    border-radius: 24px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+    border: 3px solid #16a34a;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.admin-window h2 {
+    margin-top: 0;
+    color: #16a34a;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.admin-btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    border: none;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.12);
+    transition: background 0.2s, transform 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.admin-btn:hover, .admin-btn:focus {
+    background: #14532d;
+    transform: scale(1.08);
+}
+
+.admin-btn:active {
+    background: #15803d;
+    transform: scale(0.97);
+}
